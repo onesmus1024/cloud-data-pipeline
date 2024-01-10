@@ -103,11 +103,11 @@ jobs:
           zip -r ../lambda.zip .
 
       - name: Create Artifact Bucket
-        run: |
-          aws s3api create-bucket --bucket ${{ env.ENVIROMENT }}-${{ env.AWS_REGION }}-artifact-bucket --region ${{ env.AWS_REGION }} 
+        run: | 
+          aws s3api create-bucket --bucket ${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-artifact-bucket 
       - name: Upload Artifact to S3
         run: |
-          aws s3 cp src/lambda.zip s3://${{ env.ENVIROMENT }}-${{ env.AWS_REGION }}-artifact-bucket --region ${{ env.AWS_REGION }}
+          aws s3 cp src/lambda.zip s3://${{ env.ENVIROMENT }}-${{ env.AWS_REGION }}-artifact-bucket --recursive
   Deploy:
     runs-on: ubuntu-latest
     needs: Build
