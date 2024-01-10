@@ -5,6 +5,8 @@
 
 on: create
 
+permissions:
+  contents: write
 name: Release
 jobs:
   release:
