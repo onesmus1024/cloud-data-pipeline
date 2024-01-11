@@ -6,9 +6,6 @@ Parameters:
     Type: String
     Description: Environment name
     Default: dev
-    AllowedValues:
-      - dev
-      - prod
   AWSRegion:
     Type: String
     Description: AWS Region
