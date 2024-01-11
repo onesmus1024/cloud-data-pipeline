@@ -52,7 +52,7 @@ Resources:
               - sts:AssumeRole
       Path: /
       Policies:
-        - PolicyName: !Sub ${Environment}-${LambdaFunctionName}-policy
+        - PolicyName: dev-data-processor-launch-policy
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
