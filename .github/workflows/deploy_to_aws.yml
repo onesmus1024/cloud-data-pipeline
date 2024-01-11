@@ -147,7 +147,7 @@ jobs:
       - name: Deploy CloudFormation Stack
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: sample-glue-job
+          name: ${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-cloud-data-pipeline
           template: aws/cloudformation.yaml
           capabilities: CAPABILITY_NAMED_IAM
           parameter-overrides: |
