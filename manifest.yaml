@@ -1,4 +1,4 @@
-BUCKET_NAME: 'dev-glue-artifacts'
-AWS_REGION: 'us-east-1'
-ENVIRONMENT: 'dev'
+BUCKET_NAME: dev-us-east-1-artifacts-bucket
+AWS_REGION: us-east-1
+ENVIRONMENT: dev
 
