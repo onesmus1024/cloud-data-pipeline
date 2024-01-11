@@ -151,9 +151,9 @@ jobs:
           template: aws/cloudformation.yaml
           capabilities: CAPABILITY_NAMED_IAM
           parameter-overrides: |
-            Environment=${{ env.ENVIROMENT }}
-            AWSRegion=${{ env.AWS_REGION }}
-            LambdaArtifactBucket=${{ env.ENVIROMENT }}-${{ env.AWS_REGION }}-artifacts-bucket
+            Environment= dev
+            AWSRegion= us-east-1
+            LambdaArtifactBucket=dev-us-east-1-artifacts-bucket
             LambdaArtifactKey=lambda.zip
 
             
