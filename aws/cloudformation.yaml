@@ -40,7 +40,7 @@ Resources:
   LambdaExecutionRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub ${Environment}-${LambdaFunctionName}-role
+      RoleName: dev-data-processor-lambda-role
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -52,7 +52,7 @@ Resources:
               - sts:AssumeRole
       Path: /
       Policies:
-        - PolicyName: dev-data-processor-launch-policy
+        - PolicyName: dev-data-processor-lambda-policy
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
