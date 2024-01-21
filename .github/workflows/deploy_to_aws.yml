@@ -115,7 +115,7 @@ jobs:
 
       - name: Upload Artifact to S3
         run: |
-          aws s3 cp ./lambda.zip s3://${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-artifact-bucket/lambda.zip
+          aws s3 cp ./lambda.zip s3://${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-artifacts-bucket/lambda.zip
           
   Deploy:
     runs-on: ubuntu-latest
