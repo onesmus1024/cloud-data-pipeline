@@ -111,7 +111,7 @@ jobs:
 
       - name: Create Artifact Bucket
         run: | 
-          aws s3api create-bucket --bucket ${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-artifact-bucket 
+          aws s3api create-bucket --bucket ${{ env.ENVIRONMENT }}-${{ env.AWS_REGION }}-artifacts-bucket 
 
       - name: Upload Artifact to S3
         run: |

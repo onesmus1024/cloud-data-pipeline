@@ -35,7 +35,7 @@ Resources:
       Code:
         S3Bucket: !Ref LambdaCodeBucket
         S3Key: !Ref LambdaCodeKey
-      Runtime: python3.6
+      Runtime: python3.11
 
   LambdaExecutionRole:
     Type: AWS::IAM::Role
